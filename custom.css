@@ -31,6 +31,10 @@ body {
   border: 1px solid black;
 }
 
+.quadratino-item:hover {
+  cursor: pointer;
+}
+
 .quadratino-item img {
   height: 100%;
   width: 100%;
@@ -57,7 +61,7 @@ body {
 .text {
   padding: 3rem;
   text-align: center;
-  font-size: 5rem;
+  font-size: 3rem;
   z-index: 2;
   font-family: "Rock Salt", cursive;
   font-weight: 700;
@@ -73,7 +77,23 @@ body {
     height: 46vh;
     width: 46vh;
   }
-  #punteggio {
-    font-size: 3rem;
-  }
+}
+
+#try-again-button {
+  width: 15rem;
+  height: 8rem;
+  font-size: 2rem;
+  border-radius: 20%;
+  font-family: "Rock Salt", cursive;
+}
+
+#try-again-button:hover {
+  cursor: pointer;
+}
+
+#pop-up-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

@@ -44,6 +44,8 @@ const creaGriglia = () => {
   }
 };
 
+creaGriglia();
+
 function flipCard(quadratino) {
   if (!quadratino.classList.contains("flipped") && flippedCards.length < 2) {
     quadratino.classList.add("flipped");
@@ -86,4 +88,10 @@ function checkCards() {
   }
 }
 
-creaGriglia();
+function tryAgainButton() {
+  const button = document.getElementById("try-again-button");
+  button.addEventListener("click", () => {
+    location.reload();
+  });
+}
+tryAgainButton();
