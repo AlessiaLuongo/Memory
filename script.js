@@ -61,7 +61,8 @@ function youWin() {
   const popup = document.getElementById("pop-up");
   const iframe = document.getElementById("i-frame");
 
-  popup.style.display = "block";
+  popup.style.display = "flex";
+  iframe.style.display = "block";
 
   iframe.src = "https://www.youtube.com/embed/c2TQNWzKJ0I?autoplay=1";
 }
