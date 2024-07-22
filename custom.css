@@ -1,12 +1,21 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 main {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
   padding: 2rem;
   background-image: url("https://img.freepik.com/premium-vector/metal-music-illustration-seamless-pattern-design_615746-171.jpg");
 }
@@ -49,13 +58,16 @@ body {
 }
 
 #pop-up {
+  display: none;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   width: 100%;
   backdrop-filter: blur(10px);
   position: fixed;
   z-index: 2;
-  left: 0%;
-  top: 0%;
+  left: 0;
+  top: 0;
 }
 
 .text {
@@ -76,6 +88,19 @@ body {
   #quadrato {
     height: 46vh;
     width: 46vh;
+  }
+
+  .text {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  #try-again-button {
+    width: 10rem;
+    height: 5rem;
+    font-size: 1.5rem;
+    border-radius: 20%;
+    font-family: "Rock Salt", cursive;
   }
 }
 
