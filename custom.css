@@ -1,33 +1,61 @@
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+main {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-main {
-  height: 100%;
-  width: 100%;
+body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
   padding: 2rem;
+  background-image: url("https://img.freepik.com/premium-vector/metal-music-illustration-seamless-pattern-design_615746-171.jpg");
+}
+
+#quadrato {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 0.5rem;
+  height: 98vh;
+  width: 98vh;
+  box-sizing: border-box;
+}
+
+.quadratino-item {
+  background-color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 1;
+  border: 1px solid black;
+}
+
+.quadratino-item:hover {
+  cursor: pointer;
+}
+
+.quadratino-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
+}
+
+.quadratino-item.flipped img {
+  transform: rotateY(0);
 }
 
 #pop-up {
-  display: none;
-  justify-content: center;
-  align-items: center;
   height: 100%;
   width: 100%;
   backdrop-filter: blur(10px);
   position: fixed;
   z-index: 2;
-  left: 0;
-  top: 0;
+  left: 0%;
+  top: 0%;
 }
 
 .text {
@@ -40,22 +68,32 @@ main {
   font-style: normal;
 }
 
+#i-frame {
+  display: none;
+}
+
 @media only screen and (max-width: 826px) {
   #quadrato {
     height: 46vh;
     width: 46vh;
   }
+}
 
-  .text {
-    font-size: 2rem;
-    padding: 1rem;
-  }
+#try-again-button {
+  width: 15rem;
+  height: 8rem;
+  font-size: 2rem;
+  border-radius: 20%;
+  font-family: "Rock Salt", cursive;
+}
 
-  #try-again-button {
-    width: 10rem;
-    height: 5rem;
-    font-size: 1.5rem;
-    border-radius: 20%;
-    font-family: "Rock Salt", cursive;
-  }
+#try-again-button:hover {
+  cursor: pointer;
+}
+
+#pop-up-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
